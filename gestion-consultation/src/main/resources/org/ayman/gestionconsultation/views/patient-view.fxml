@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ayman.gestionconsultation.controllers.PatientController">
+    <left>
+        <VBox spacing="20" alignment="TOP_CENTER" style="-fx-background-color: #2d3e50; -fx-padding: 30;">
+            <Label text="Gestion Patients" style="-fx-font-size: 22px; -fx-text-fill: white; -fx-font-weight: bold;" />
+            <Separator />
+            <TextField fx:id="textFieldSearch" promptText="Rechercher..." style="-fx-background-radius: 20; -fx-padding: 8 16;" />
+        </VBox>
+    </left>
+    <center>
+        <VBox spacing="18" alignment="TOP_CENTER" style="-fx-padding: 30;">
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <VBox spacing="10">
+                    <Label text="Nom" style="-fx-font-size: 14px;" />
+                    <TextField fx:id="textFieldNom" promptText="Nom" style="-fx-background-radius: 10;" />
+                </VBox>
+                <VBox spacing="10">
+                    <Label text="Prénom" style="-fx-font-size: 14px;" />
+                    <TextField fx:id="textFieldPrenom" promptText="Prénom" style="-fx-background-radius: 10;" />
+                </VBox>
+                <VBox spacing="10">
+                    <Label text="Téléphone" style="-fx-font-size: 14px;" />
+                    <TextField fx:id="textFieldTel" promptText="Téléphone" style="-fx-background-radius: 10;" />
+                </VBox>
+                <VBox spacing="10" alignment="BOTTOM_CENTER">
+                    <Button text="Ajouter" onAction="#ajouterPatient" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 20; -fx-font-weight: bold;" />
+                    <Button text="Modifier" onAction="#modifierPatient" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-background-radius: 20; -fx-font-weight: bold;" />
+                    <Button text="Supprimer" onAction="#supprimerPatient" style="-fx-background-color: #F44336; -fx-text-fill: white; -fx-background-radius: 20; -fx-font-weight: bold;" />
+                </VBox>
+            </HBox>
+            <Label fx:id="labelSuccess" style="-fx-text-fill: #4CAF50; -fx-font-size: 14px; -fx-font-weight: bold;" />
+            <TableView fx:id="tableViewPatients" prefHeight="300.0" prefWidth="700.0" style="-fx-background-radius: 10;">
+                <columns>
+                    <TableColumn fx:id="columnId" prefWidth="60.0" text="ID" />
+                    <TableColumn fx:id="columnNom" prefWidth="180.0" text="Nom" />
+                    <TableColumn fx:id="columnPrenom" prefWidth="180.0" text="Prénom" />
+                    <TableColumn fx:id="columnTel" prefWidth="180.0" text="Téléphone" />
+                </columns>
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                </columnResizePolicy>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>
