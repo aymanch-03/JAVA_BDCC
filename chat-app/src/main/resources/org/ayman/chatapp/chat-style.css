@@ -1,0 +1,47 @@
+/* Root pane styling */
+.root-pane {
+    -fx-background-color: #f4f6fb;
+}
+
+/* Chat area styling */
+.chat-area {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-padding: 12px;
+    -fx-font-size: 15px;
+    -fx-font-family: 'Segoe UI', 'Arial', sans-serif;
+    -fx-effect: dropshadow(gaussian, #e0e0e0, 8, 0.2, 0, 2);
+}
+
+/* Input bar styling */
+.input-bar {
+    -fx-padding: 0 0 0 0;
+}
+
+/* Input field styling */
+.input-field {
+    -fx-background-color: #fff;
+    -fx-border-color: #d1d5db;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 15px;
+    -fx-padding: 8px 12px;
+    -fx-effect: dropshadow(gaussian, #e0e0e0, 4, 0.1, 0, 1);
+}
+
+/* Send button styling */
+.send-button {
+    -fx-background-color: linear-gradient(to right, #4f8cff, #2355d8);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-padding: 8px 20px;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #b3c6ff, 4, 0.2, 0, 1);
+}
+.send-button:hover {
+    -fx-background-color: linear-gradient(to right, #2355d8, #4f8cff);
+} 
