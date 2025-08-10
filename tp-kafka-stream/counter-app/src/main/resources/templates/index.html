@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Click Producer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="container">
+        <h2>Click the button to send an event to Kafka</h2>
+        <form method="post" action="/click">
+            <button type="submit">Cliquez ici</button>
+        </form>
+        <p class="message" th:text="${message}"></p>
+    </div>
+</body>
+</html>
